@@ -19,11 +19,13 @@ bool hledani = seznam.Contains(hledany);
 if (hledani) { Console.WriteLine($"List obsahuje slovo \"{hledany}\""); } else { Console.WriteLine($"List neobsahuje slovo \"{hledany}\""); }
 
 // 6. Vypiš do konzole, kolik je v tom listu prvků a připoj k tomu všechny ty hodnoty (např: "2: modra, zelena").
-foreach (string s in seznam)
-{
-    int cislo = seznam.IndexOf(s);
-    Console.WriteLine($"{cislo}: {s}");
-}
+//foreach (string s in seznam)
+//{
+//    int cislo = seznam.IndexOf(s);
+//    Console.WriteLine($"{cislo}: {s}");
+//}
+
+Console.WriteLine(seznam.Count() + ": " + string.Join(", ", seznam));
 
 // 7. Vytvoř slovník, kde klíčem bude položka nákupu (string) a hodnotou cena té položky, a vlož nějaké hodnoty (např: <"chleba", 20>).
 var cenik = new Dictionary<string, int>();
